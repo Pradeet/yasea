@@ -20,12 +20,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    // uncomment these lines to compile so files
-//    externalNativeBuild {
-//        ndkBuild {
-//            path 'src/main/cpp/Android.mk'
-//        }
-//    }
+//     externalNativeBuild {
+//         ndkBuild {
+//             path 'src/main/cpp/Android.mk'
+//         }
+//     }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 }
 
 dependencies {
